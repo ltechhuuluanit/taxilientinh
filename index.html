@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dịch vụ xe du lịch Taxi liên tỉnh giá rẻ Thiện. Chuyên phục vụ xe 4-7-16-29 chỗ đưa rước sân bay, khám bệnh, chạy gia đình dịp Tết 2026.">
+    <meta name="keywords" content="xe du lịch, taxi liên tỉnh, thuê xe 4 chỗ, thuê xe 7 chỗ, xe đưa rước sân bay, thuê xe Vĩnh Long, taxi Vĩnh Long">
+    <title>Dịch Vụ Xe Du Lịch Taxi Liên Tỉnh Giá Rẻ - Gọi Ngay: 0961.559.274</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* CSS Reset & Variables */
+        :root {
+            --primary-blue: #0056b3;
+            --light-blue: #e6f2ff;
+            --tet-red: #e74c3c;
+            --tet-gold: #f1c40f;
+            --white: #ffffff;
+            --text-dark: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--tet-gold);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .logo span {
+            color: var(--white);
+            font-size: 14px;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            margin: 0 15px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--tet-gold);
+        }
+
+        .hotline-btn {
+            background-color: var(--tet-red);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Hero Banner */
+        .hero {
+            position: relative;
+            height: 80vh;
+            background: url('https://sf-static.upanhlaylink.com/img/image_20260207fdf953235beccf24f7d7417a4f78f3d4.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 86, 179, 0.6); /* Blue overlay */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero-content h2 {
+            font-size: 48px;
+            color: var(--tet-gold);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn-main {
+            background-color: var(--tet-red);
+            color: var(--white);
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            border: 2px solid var(--tet-gold);
+            transition: 0.3s;
+        }
+
+        .btn-main:hover {
+            background-color: var(--tet-gold);
+            color: var(--text-dark);
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: var(--primary-blue);
+            margin: 50px 0 30px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--tet-red);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Giới thiệu & Dịch vụ */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--light-blue);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border: 1px solid #cce0ff;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-blue);
+        }
+
+        .service-card i {
+            font-size: 50px;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--tet-red);
+        }
+
+        /* Bảng giá */
+        .pricing-table-wrapper {
+            overflow-x: auto;
+        }
+
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--white);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .pricing-table th, .pricing-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .pricing-table th {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            font-size: 18px;
+        }
+
+        .pricing-table tr:hover {
+            background-color: var(--light-blue);
+        }
+
+        /* Thư viện hình ảnh */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            border: 2px solid var(--white);
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+            border-color: var(--primary-blue);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ddd;
+            padding: 40px 5%;
+            margin-top: 50px;
+            text-align: center;
+            border-top: 5px solid var(--tet-red);
+        }
+
+        footer h3 {
+            color: var(--tet-gold);
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        /* Floating Contact Buttons */
+        .floating-contact {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 9999;
+        }
+
+        .float-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: var(--white);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            text-decoration: none;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .btn-zalo {
+            background-color: #0068ff;
+            animation: pulse-zalo 2s infinite;
+        }
+        
+        .btn-fb {
+            background-color: #1877f2;
+        }
+
+        .btn-call {
+            background-color: #28a745;
+            animation: pulse-call 2s infinite;
+        }
+
+        .float-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(231, 76, 60, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
+        }
+        @keyframes pulse-call {
+            0% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(40, 167, 69, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+        }
+        @keyframes pulse-zalo {
+            0% { box-shadow: 0 0 0 0 rgba(0, 104, 255, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(0, 104, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 104, 255, 0); }
+        }
+
+        /* Popup */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .popup-content {
+            background: var(--white);
+            width: 90%;
+            max-width: 500px;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            border: 4px solid var(--tet-red);
+            background-image: linear-gradient(to bottom, #fff, #ffe6e6);
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        .popup-content h2 {
+            color: var(--tet-red);
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .popup-content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero-content h2 { font-size: 32px; }
+            .hero-content p { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>TAXI LIÊN TỈNH</h1>
+            <span>Uy Tín - An Toàn - Giá Rẻ</span>
+        </div>
+        <div class="nav-links">
+            <a href="#gioi-thieu">Giới Thiệu</a>
+            <a href="#dich-vu">Dịch Vụ</a>
+            <a href="#bang-gia">Bảng Giá</a>
+            <a href="#thu-vien">Hình Ảnh Xe</a>
+        </div>
+        <a href="tel:0961559274" class="hotline-btn">
+            <i class="fas fa-phone-alt"></i> 0961.559.274
+        </a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>CHÀO XUÂN BÍNH NGỌ 2026<br>VẠN DẶM BÌNH AN</h2>
+            <p>Chuyên cung cấp dịch vụ xe du lịch, taxi liên tỉnh 4 - 7 - 16 - 29 chỗ.<br>Đưa rước sân bay, khám bệnh, nhận chạy tại gia đình trọn gói giá tốt nhất.</p>
+            <a href="tel:0961559274" class="btn-main">GỌI ĐẶT XE NGAY: 0961.559.274</a>
+        </div>
+    </section>
+
+    <div class="container" id="dich-vu">
+        <h2 class="section-title">Dịch Vụ Nổi Bật</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-plane-departure"></i>
+                <h3>Đưa Rước Sân Bay</h3>
+                <p>Đón trả khách đúng giờ tại sân bay Tân Sơn Nhất, Cần Thơ,... Phục vụ 24/7 chuyên nghiệp, an toàn.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-hospital"></i>
+                <h3>Đưa Đón Khám Bệnh</h3>
+                <p>Hỗ trợ đưa đón bệnh nhân tuyến tỉnh lên các bệnh viện lớn tại TP.HCM an toàn, êm ái, tận tình.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-home"></i>
+                <h3>Phục Vụ Gia Đình</h3>
+                <p>Nhận chạy các chuyến đi chơi, về quê, tảo mộ dịp lễ Tết. Phục vụ chu đáo như xe nhà.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-car-side"></i>
+                <h3>Cho Thuê Xe 4-29 Chỗ</h3>
+                <p>Đa dạng các dòng xe đời mới: 4 chỗ, 7 chỗ, 16 chỗ, 29 chỗ. Sạch sẽ, nội thất sang trọng.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="bang-gia">
+        <h2 class="section-title">Bảng Giá Tham Khảo</h2>
+        <p style="text-align: center; margin-bottom: 20px;"><i>Bảng giá mang tính chất tham khảo, giá có thể thay đổi nhẹ trong dịp Lễ, Tết. Vui lòng gọi trực tiếp để có giá tốt nhất!</i></p>
+        <div class="pricing-table-wrapper">
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Tuyến Đường</th>
+                        <th>Xe 4 Chỗ</th>
+                        <th>Xe 7 Chỗ</th>
+                        <th>Xe 16 Chỗ</th>
+                        <th>Đặt Xe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Trà Vinh - Sân bay Tân Sơn Nhất</td>
+                        <td>Liên hệ báo giá</td>
+                        <td>Liên hệ báo giá</td>
+                        <td>Liên hệ báo giá</td>
+                        <td><a href="tel:0961559274" style="color:var(--tet-red); font-weight:bold;">0961.559.274</a></td>
+                    </tr>
+                    <tr>
+                        <td>Trà Vinh - BV Chợ Rẫy / ĐH Y Dược</td>
+                        <td>Liên hệ báo giá</td>
+                        <td>Liên hệ báo giá</td>
+                        <td>Liên hệ báo giá</td>
+                        <td><a href="tel:0961559274" style="color:var(--tet-red); font-weight:bold;">0961.559.274</a></td>
+                    </tr>
+                    <tr>
+                        <td>Thuê xe chạy tour / Theo ngày</td>
+                        <td>Thỏa thuận</td>
+                        <td>Thỏa thuận</td>
+                        <td>Thỏa thuận</td>
+                        <td><a href="tel:0961559274" style="color:var(--tet-red); font-weight:bold;">0961.559.274</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="container" id="thu-vien">
+        <h2 class="section-title">Hình Ảnh Đội Xe Thực Tế</h2>
+        <div class="gallery-grid">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260207dd80c447ab521549dc61692e07e72c12.jpg" alt="Xe taxi du lịch 1">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260207619555078589e4ca98bc46c5ec3f5f4d.jpg" alt="Xe taxi du lịch 2">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260207cc22bb70f14b25c123c651d1b933bd00.jpg" alt="Xe taxi du lịch 3">
+            <img src="https://sf-static.upanhlaylink.com/img/image_2026020765a553614f9209f8b690c9e64e8efb13.jpg" alt="Xe taxi du lịch 4">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260207eeb75c109f413f45fc58e576aca75ed9.jpg" alt="Xe taxi du lịch 5">
+            <img src="https://sf-static.upanhlaylink.com/img/image_202602076cfae4772d1be835d15d3a77cce8ae98.jpg" alt="Xe taxi du lịch 6">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260207e11da1ae7f7f07e18c159a295a544707.jpg" alt="Nội thất xe 1">
+            <img src="https://sf-static.upanhlaylink.com/img/image_2026020715ad474dba0d59feeef10cc023fef32b.jpg" alt="Nội thất xe 2">
+            <img src="https://sf-static.upanhlaylink.com/img/image_2026020745bad8e13b978ec90f531f50a015545e.jpg" alt="Nội thất xe 3">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260207fddf4fa7ee33c29110cfdad6bc65a74f.jpg" alt="Nội thất xe 4">
+        </div>
+    </div>
+
+    <footer id="gioi-thieu">
+        <h3>DỊCH VỤ XE DU LỊCH TAXI LIÊN TỈNH THIỆN</h3>
+        <p><strong>Hotline / Zalo:</strong> 0961.559.274 (Gặp Thiện)</p>
+        <p><strong>Địa chỉ:</strong> Ấp Chợ, Xã Tập Ngãi, Phường Trà Vinh, Tỉnh Vĩnh Long</p>
+        <p>Phục vụ bằng chữ TÂM - Lấy AN TOÀN làm đầu.</p>
+        <p style="margin-top: 20px; font-size: 14px; color: #888;">&copy; 2026 Xe Du Lịch Thiện. All Rights Reserved.</p>
+    </footer>
+
+    <div class="floating-contact">
+        <a href="https://www.facebook.com/share/1CN2W1sVzB/?mibextid=wwXIfr" target="_blank" class="float-btn btn-fb" title="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://zalo.me/0961559274" target="_blank" class="float-btn btn-zalo" title="Zalo">
+            <i class="strong">Z</i>
+        </a>
+        <a href="tel:0961559274" class="float-btn btn-call" title="Gọi Ngay">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <div class="popup-overlay" id="promoPopup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup()">&times;</span>
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260207fdf953235beccf24f7d7417a4f78f3d4.jpg" style="width: 100%; border-radius: 10px; margin-bottom: 15px;" alt="Ưu đãi tết">
+            <h2>🎉 ƯU ĐÃI TẾT 2026 🎉</h2>
+            <p><strong>Đặt xe sớm - Giá siêu hời!</strong></p>
+            <p>Giảm ngay <strong>10%</strong> cho khách hàng liên hệ đặt xe đi Sân bay hoặc đi Khám bệnh trong hôm nay.</p>
+            <a href="tel:0961559274" class="btn-main" style="display: inline-block; width: 100%; margin-top: 10px;">GỌI NGAY: 0961.559.274</a>
+        </div>
+    </div>
+
+    <script>
+        // Hiển thị Popup sau 3 giây khi vào web
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('promoPopup').style.display = 'flex';
+            }, 3000);
+        };
+
+        // Đóng Popup
+        function closePopup() {
+            document.getElementById('promoPopup').style.display = 'none';
+        }
+
+        // Nhấn ra ngoài để đóng Popup
+        window.onclick = function(event) {
+            let popup = document.getElementById('promoPopup');
+            if (event.target == popup) {
+                popup.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
